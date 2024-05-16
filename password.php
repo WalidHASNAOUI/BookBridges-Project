@@ -11,20 +11,22 @@
         <img src="book.png">
         <h1>Change password</h1>
 
-        <form id="passwordForm">
+        <?php include 'fctpassword.php'; ?>
+
+        <form id="passwordForm" method="post" action="password.php">
             <div class="form-group">
                 <label for="username">Email address</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" id="username" name="username" required <?php if(isset($error)) echo 'style="border-color: red;"'; ?>>
             </div>
 
             <div class="form-group">
                 <label for="new-password">New password</label>
-                <input type="password" id="new-password" name="new-password" required>
+                <input type="password" id="new-password" name="new-password" required <?php if(isset($error)) echo 'style="border-color: red;"'; ?>>
             </div>
 
             <div class="form-group">
                 <label for="verify-password">Verify new password</label>
-                <input type="password" id="verify-password" name="verify-password" required>
+                <input type="password" id="verify-password" name="verify-password" required <?php if(isset($error)) echo 'style="border-color: red;"'; ?>>
                 <p id="error-message" style="color: red; display: none;">Passwords do not match.</p>
             </div>
 
@@ -32,10 +34,18 @@
                 <button type="submit">Submit</button>
             </div>
         </form>
+
+        <?php
+        if (isset($message)) {
+            echo '<p style="color: green;">' . $message . '</p>';
+        } elseif (isset($error)) {
+            echo '<p style="color: red;">' . $error . '</p>';
+        }
+        ?>
+
         <div class="secondary-links">
             <a href="login.php">Back to Login</a>
         </div>
-        
     </div>
 
     <script>
@@ -58,4 +68,3 @@
     </script>
 </body>
 </html>
-

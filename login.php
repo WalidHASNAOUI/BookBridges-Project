@@ -11,15 +11,17 @@
         <img src="book.png">
         <h1>Sign in BookMeet</h1>
 
-        <form>
+        <?php include 'fctlogin.php'; ?>
+
+        <form method="post" action="login.php">
             <div class="form-group">
                 <label for="username">Email address</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" id="username" name="username" required <?php if(isset($error)) echo 'style="border-color: red;"'; ?>>
             </div>
 
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password" required <?php if(isset($error)) echo 'style="border-color: red;"'; ?>>
             </div>
 
             <div class="form-group">
@@ -27,12 +29,20 @@
             </div>
             <a href="https://tp-epua.univ-smb.fr/~dahmanei/BookBridges-Project/password.php">Forgot password?</a>
         </form>
-        
+
+        <?php
+        if (isset($message)) {
+            echo '<p style="color: green;">' . $message . '</p>';
+        } elseif (isset($error)) {
+            echo '<p style="color: red;">' . $error . '</p>';
+        }
+        ?>
+
         <div class="secondary-links">
             <a>New to BookMeet? </a>
             <a href="https://tp-epua.univ-smb.fr/~dahmanei/BookBridges-Project/signup.php">Create an account</a>
         </div>
     </div>
-
 </body>
 </html>
+

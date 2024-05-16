@@ -1,3 +1,4 @@
+<?php include 'fctsignup.php'; ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -11,7 +12,9 @@
         <img src="book.png" alt="BookMeet Logo">
         <h1>Sign up to BookMeet</h1>
 
-        <form id="signupForm">
+        <?php include 'fctsignup.php'; ?>
+
+        <form id="signupForm" method="post" action="signup.php">
             <div class="form-group">
                 <label for="first-name">First Name</label>
                 <input type="text" id="first-name" name="first-name" required>
@@ -78,4 +81,3 @@
     </script>
 </body>
 </html>
-
