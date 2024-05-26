@@ -1,0 +1,282 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(255, 215, 102);
+    color: #333;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header_logo_app img {
+    height: 50px;
+    margin-left: 20px;
+}
+
+.header__nav a {
+    margin: 0 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.header_search_bar {
+    flex-grow: 1;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.header_search_bar .search-bar {
+    display: inline-block;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+}
+
+.header_search_bar input[type="text"] {
+    width: calc(100% - 40px);
+    padding: 10px;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.header_search_bar button {
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: rgb(255, 215, 102);
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+
+.header_search_bar button:hover {
+    background-color: #555;
+}
+
+.header_username {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.header_username p {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: rgb(255, 215, 102);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+
+.prf {
+    margin-bottom: -10px;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+.logout-button, .update-password-button {
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+
+.logout-button:hover, .update-password-button:hover {
+    background-color: #d32f2f;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    width: 20%;
+    padding-right: 20px;
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.sidebar .categories {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .category {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sidebar .category:hover {
+    background-color: #ddd;
+}
+
+.main-content {
+    width: 80%;
+}
+
+.books {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.book {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+.book img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.book h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.book p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.book a {
+    text-decoration: none;
+}
+
+.rating-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.rating-form button {
+    padding: 5px 10px;
+    background-color: #333;
+    color: rgb(255, 215, 102);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.rating-form button:hover {
+    background-color: #555;
+}
+
+.star {
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.star.selected {
+    color: #ff0;
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination a {
+    margin: 0 5px;
+    padding: 10px 15px;
+    background-color: rgb(255, 215, 102);
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.pagination a.active {
+    background-color: #555;
+    color: white;
+}
+
+.pagination a:hover {
+    background-color: #333;
+    color: white;
+}
+
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info {
+    margin-left: 20px;
+}
+
+.profile-info h1 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.profile-info p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.profile-ratings {
+    margin-top: 20px;
+}
+
+.profile-ratings h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
