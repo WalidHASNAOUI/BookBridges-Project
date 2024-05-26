@@ -88,10 +88,6 @@ header {
     margin-left: 10px;
 }
 
-.prf {
-    margin-bottom: -10px;
-}
-
 .button:hover {
     background-color: #555;
 }
@@ -120,180 +116,51 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.sidebar {
-    width: 20%;
-    padding-right: 20px;
-}
-
-.sidebar h2 {
-    font-size: 24px;
-    margin-top: 0;
-}
-
-.sidebar .categories {
-    display: flex;
-    flex-direction: column;
-}
-
-.sidebar .category {
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #f1f1f1;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.sidebar .category:hover {
-    background-color: #ddd;
-}
-
 .main-content {
-    width: 80%;
+    width: 100%;
 }
 
-.books {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+.message-form, .messages-list {
+    margin-top: 20px;
 }
 
-.book {
+.message-form h2, .messages-list h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.message-form form, .messages-list .message {
+    margin-bottom: 20px;
+    padding: 10px;
     background-color: #f9f9f9;
-    padding: 15px;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    width: calc(33.333% - 20px);
+}
+
+.message-form textarea, .message p {
+    margin: 5px 0;
+    color: #333;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
     box-sizing: border-box;
 }
 
-.book img {
-    max-width: 100%;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.book h3 {
-    margin: 0;
-    font-size: 18px;
-    color: #333;
-}
-
-.book p {
-    margin: 5px 0;
-    color: #666;
-}
-
-.book a {
-    text-decoration: none;
-}
-
-.rating-form {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-
-.rating-form button {
-    padding: 5px 10px;
+button {
+    padding: 10px 20px;
     background-color: #333;
     color: rgb(255, 215, 102);
     border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.rating-form button:hover {
-    background-color: #555;
-}
-
-.star {
-    font-size: 24px;
-    color: #ccc;
-    cursor: pointer;
-}
-
-.star.selected {
-    color: #ff0;
-}
-
-.pagination {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.pagination a {
-    margin: 0 5px;
-    padding: 10px 15px;
-    background-color: rgb(255, 215, 102);
-    color: #333;
-    text-decoration: none;
     border-radius: 5px;
+    cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.pagination a.active {
+button:hover {
     background-color: #555;
-    color: white;
-}
-
-.pagination a:hover {
-    background-color: #333;
-    color: white;
-}
-
-
-.profile-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.profile-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.profile-info {
-    margin-left: 20px;
-}
-
-.profile-info h1 {
-    font-size: 32px;
-    margin: 0;
-}
-
-.profile-info p {
-    margin: 5px 0;
-    color: #666;
-}
-
-.profile-ratings {
-    margin-top: 20px;
-}
-
-.profile-ratings h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.discuss-link {
-    font-size: 12px;
-    display: inline-block;
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #333;
-    color: rgb(255, 215, 102);
-    text-decoration: none;
-    border-radius: 3px;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.discuss-link:hover {
-    background-color: #555;
-    transform: translateY(-2px);
 }

@@ -211,9 +211,10 @@ if (isset($_GET['search']) && !empty($_GET['search'])) {
                     for ($i = 1; $i <= 5; $i++) {
                         echo "<span class='star' id='star-" . $row_books['id'] . "-" . $i . "' onclick='setRating(" . $row_books['id'] . ", " . $i . ")'>&#9733;</span>";
                     }
-                    echo "<button type='submit'>Evaluez ce livre</button>";
+                    echo "<br><button type='submit'>Evaluez ce livre</button></br>";
                     echo "</form>";
                     echo "</div>";
+                    echo "<a class='discuss-link' href='networking.php?book_id=" . $row_books['id'] . "' >Discuss this book</a>"; // Add this line
                     echo "</div>";
                 }
                 ?>
