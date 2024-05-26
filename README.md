@@ -26,6 +26,7 @@ Clone the repository to your local machine:
 ```bash
 git clone https://github.com/WalidHASNAOUI/bookbridge-mini-project.git
 cd bookbridge-mini-project
+```
 
 ### Step 2: Configure the Database
 
