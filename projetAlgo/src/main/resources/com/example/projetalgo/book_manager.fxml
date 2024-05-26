@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.projetalgo.BookController">
+    <top>
+        <HBox spacing="10" style="-fx-padding: 10;">
+            <Label text="BookMeet Database Manager" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+        </HBox>
+    </top>
+    <center>
+        <VBox spacing="10" style="-fx-padding: 10;">
+            <TableView fx:id="tableView" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="idColumn" text="ID"/>
+                    <TableColumn fx:id="titreColumn" text="Title"/>
+                    <TableColumn fx:id="idAuteurColumn" text="Author"/>
+                    <TableColumn fx:id="resumeColumn" text="Summary"/>
+                    <TableColumn fx:id="imageColumn" text="Link to picture"/>
+                    <TableColumn fx:id="genreColumn" text="Genre"/>
+                    <TableColumn fx:id="anneeColumn" text="Year"/>
+                    <TableColumn fx:id="prixColumn" text="Price"/>
+                </columns>
+            </TableView>
+            <HBox spacing="10" alignment="CENTER">
+                <TextField fx:id="searchField" promptText="Search by Title/Author/Genre" HBox.hgrow="ALWAYS"/>
+                <Button text="Search" onAction="#search"/>
+            </HBox>
+        </VBox>
+    </center>
+    <right>
+        <VBox spacing="10" style="-fx-padding: 10;">
+            <HBox spacing="10">
+                <Label text="Author:"/>
+                <ComboBox fx:id="auteurComboBox" prefWidth="200"/>
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Title:"/>
+                <TextField fx:id="titreField" prefWidth="200"/>
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Summary:"/>
+                <TextField fx:id="resumeField" prefWidth="200"/>
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Link to picture:"/>
+                <TextField fx:id="imageField" prefWidth="200"/>
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Genre:"/>
+                <ComboBox fx:id="genreComboBox" prefWidth="200"/>
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Year:"/>
+                <TextField fx:id="anneeField" prefWidth="200"/>
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Price:"/>
+                <TextField fx:id="prixField" prefWidth="200"/>
+            </HBox>
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="Add" onAction="#addBook"/>
+                <Button text="Update" onAction="#updateBook"/>
+                <Button text="Delete" onAction="#deleteBook"/>
+            </HBox>
+        </VBox>
+    </right>
+</BorderPane>

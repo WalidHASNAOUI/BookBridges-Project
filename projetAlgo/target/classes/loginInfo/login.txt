@@ -1,0 +1,4 @@
+username: ikram
+password: Ikram2001
+dbhost: localhost
+dbname: scraping

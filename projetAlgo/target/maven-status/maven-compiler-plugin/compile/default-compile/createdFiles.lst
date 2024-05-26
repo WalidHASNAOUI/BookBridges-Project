@@ -1,0 +1,5 @@
+module-info.class
+com\example\projetalgo\Connexion.class
+com\example\projetalgo\HelloApplication.class
+com\example\projetalgo\HelloController.class
+com\example\projetalgo\ScriptRunner.class
